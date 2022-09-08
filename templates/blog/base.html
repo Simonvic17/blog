@@ -11,7 +11,7 @@
 	
 	<!-- core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+    {% comment %} <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet"> {% endcomment %}
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
     <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
@@ -64,7 +64,7 @@
         </div>
     </footer><!--/#footer-->
 
-    <script href="{% static 'js/tinymce.min.js' %}"></script>
+    {% comment %} <script href="{% static 'js/tinymce.min.js' %}"></script> {% endcomment %}
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script href="{% static 'js/main.js' %}"></script>

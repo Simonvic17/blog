@@ -39,7 +39,7 @@ INSTALLED_APPS=[
     'social_django',
     'ckeditor',
     'ckeditor_uploader',
-    'tinymce',
+    # 'tinymce',
     
     'apps.post',
     'apps.user',

@@ -1,14 +1,14 @@
 from django.db import models
 from django.urls import reverse
 from django.template.defaultfilters import slugify
-from tinymce import HTMLField
+# from tinymce import HTMLField
 from django.utils import timezone
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
 class AboutUs(models.Model):
     title = models.CharField(unique=True,max_length=100)
-    content = HTMLField()
+    content = models.TextField()
 
     def __str__(self):
         return self.title
