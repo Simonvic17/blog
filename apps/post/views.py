@@ -3,7 +3,6 @@ from apps.post.models import Post
 from .models import AboutUs, Category
 from django.shortcuts import render, redirect, get_object_or_404   
 from .forms import CreatePostForm
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from django.db.models import Q

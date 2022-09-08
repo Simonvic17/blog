@@ -1,11 +1,7 @@
 from django.shortcuts import render
-
 from apps.post.models import Post
-
 from django.http import HttpResponse
-
 from django.template.loader import get_template
-
 from xhtml2pdf import pisa
 
 def show_posts(request):
