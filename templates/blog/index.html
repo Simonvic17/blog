@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+<title>{% block title %}Home page{% endblock %}</title>
+{% block content %}
+
+<section id="main-img" style="background-image: url({% static 'images/background.png' %})"></section>
+{% endblock %}

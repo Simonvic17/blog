@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+<title>{% block title %}About Us{% endblock %}</title>
+
+{% block content %}
+
+ <section id="about-us">
+        <div class="container">
+			{% for about in about %}
+			<div class="center wow fadeInDown">
+				<h2>{{ about.title}}</h2>
+				<p class="lead">{{about.content|safe}}</p>
+			</div>
+			{% endfor %}
+			
+		</div><!--/.container-->
+    </section><!--/about-us-->
+
+{% endblock content %}

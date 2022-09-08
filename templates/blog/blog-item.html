@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+<title>{% block title %}POST | {{ post.title }}{% endblock %}</title>
+{% block content %}
+
+<section id="blog" class="container">
+
+        <div class="blog">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-item">
+                        <img class="img-responsive img-blog" src="{{post.photo.url }}" width="100%" alt="" />
+                            <div class="row"> 
+                                <div class="col-xs-12 col-sm-12 blog-content">
+                                    <h2>{{ post.title }}</h2>
+
+                                    <div class="post-tags">
+                                        <strong>Posted By:</strong> <a href="#">{{ post.user.get_full_name|title }}</a> | <strong>On:</strong> <a href="#">{{ post.date_created|date:"d M Y" }}</a>
+                                         <strong style="float: right">Category: {{ post.category|title }}</strong>
+                                    </div>
+                                    <p>{{ post.postText|safe }}</p>
+
+                                </div>
+                            </div>
+                        </div><!--/.blog-item-->
+                    </div><!--/.col-md-8-->
+
+                <aside class="col-md-4">                    
+
+                    <div class="widget categories">
+                        <h3>RELATED POSTS</h3>
+                        <div class="row">
+                            <div class="col">
+                                {% for rel in related_posts %}
+                                <ul>
+                                    <li><a href="{% url 'post:blog' rel.slug %}">{{ rel.title }}</a></li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+                        </div>                     
+                    </div><!--/.categories-->    					
+    				
+                </aside>     
+
+            </div><!--/.row-->
+
+         </div><!--/.blog-->
+
+    </section><!--/#blog-->
+
+{% endblock %}

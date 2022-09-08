@@ -1,0 +1,16 @@
+{%extends "blog/base.html"%}
+{% load crispy_forms_tags %}
+
+{% block content%}
+
+<div class="content-section">
+    <form action="" method="post">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">You logged out</legend>
+            <h5>If you want to log in again, You can <a href="{%url 'user:login'%}"</a>Log In </h5>
+        </fieldset>
+    </form>
+</div>
+
+{%endblock content%}
