@@ -9,7 +9,7 @@ from django.utils.encoding import force_str, smart_str
 django.utils.encoding.force_text = force_str
 django.utils.encoding.smart_text = smart_str
 from django.urls import re_path 
-django.conf.urls.url = re_path
+django.conf.urls = re_path
 
 ENVIRONMENT = env
 
