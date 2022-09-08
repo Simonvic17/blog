@@ -38,7 +38,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(null=True)
-    postText = HTMLField() 
+    postText = models.TextField() 
     photo = models.ImageField(upload_to = 'photos', default="default.png", blank=True, null=True)
     date_created = models.DateTimeField(default=timezone.now, null=False)
     date_updated = models.DateTimeField(default=timezone.now, null=False)
