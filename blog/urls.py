@@ -1,4 +1,4 @@
-from django.urls  import path, include, re_path
+from django.urls  import include, re_path
 from django.views.generic import TemplateView
 from django.contrib import admin
 from django.conf.urls import handler404
@@ -10,12 +10,12 @@ admin.site.site_title = 'BLOG'
 admin.site.index_title = 'Welcome to Blog'
 
 urlpatterns = [
-    path('tinymce/', include('tinymce.urls')),     
-    path("", include("apps.post.urls")),
-    path("report/", include("apps.pdf_convert.urls")),
-    path("user/", include("apps.user.urls")),
+    re_path('tinymce/', include('tinymce.urls')),     
+    re_path("", include("apps.post.urls")),
+    re_path("report/", include("apps.pdf_convert.urls")),
+    re_path("user/", include("apps.user.urls")),
     
-    path('admin/', admin.site.urls),
+    re_path('admin/', admin.site.urls),
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

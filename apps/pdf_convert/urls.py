@@ -1,9 +1,9 @@
-from django.urls import path
+from django.urls import re_path
 
 from . import views
 
 app_name = "pdf"
 urlpatterns = [
-    path('showposts', views.show_posts, name="showposts"),
-    path('create-pdf', views.pdf_report_create, name="create-pdf"),
+    re_path('showposts', views.show_posts, name="showposts"),
+    re_path('create-pdf', views.pdf_report_create, name="create-pdf"),
 ]
