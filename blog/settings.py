@@ -8,8 +8,8 @@ import django
 from django.utils.encoding import force_str, smart_str
 django.utils.encoding.force_text = force_str
 django.utils.encoding.smart_text = smart_str
-from django.urls import re_path as url
-django.conf.urls.url = url
+from django.urls import re_path 
+django.conf.urls.url = re_path
 
 ENVIRONMENT = env
 
